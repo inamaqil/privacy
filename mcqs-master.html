@@ -1,2 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Thought Manager</title>
+  <meta name="description" content="Privacy Policy for Thought Manager, a private cognitive journaling app by inamaqil." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #0A0F1E;
+      --bg-card:   #111827;
+      --bg-card2:  #0D1526;
+      --border:    #1F2D45;
+      --primary:   #7C3AED;
+      --primary-l: #A78BFA;
+      --accent:    #06B6D4;
+      --text:      #F1F5F9;
+      --text-sec:  #94A3B8;
+      --text-muted:#475569;
+      --green:     #10B981;
+      --radius:    14px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
 
-hi
+    /* ── Back link ───────────────────── */
+    .back-bar {
+      background: var(--bg-card2);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+    }
+    .back-bar a {
+      color: var(--text-sec);
+      font-size: 13.5px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color .15s;
+    }
+    .back-bar a:hover { color: var(--primary-l); }
+
+    /* ── Header ─────────────────────── */
+    header {
+      background: linear-gradient(135deg, #1E1B4B 0%, #0A0F1E 60%, #164E63 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(124,58,237,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .app-icon {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 22px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 40px;
+      box-shadow: 0 8px 32px rgba(124,58,237,.4);
+    }
+    header h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--primary-l), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+    header .subtitle { color: var(--text-sec); font-size: 15px; }
+    .badge {
+      display: inline-block;
+      background: rgba(124,58,237,.2);
+      border: 1px solid rgba(124,58,237,.4);
+      color: var(--primary-l);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 14px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    /* ── Layout ─────────────────────── */
+    main { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* ── TL;DR ───────────────────────── */
+    .tldr {
+      background: linear-gradient(135deg, rgba(16,185,129,.1), rgba(6,182,212,.08));
+      border: 1px solid rgba(16,185,129,.3);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+    .tldr h2 { color: var(--green); font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .tldr ul { list-style: none; display: grid; gap: 10px; }
+    .tldr li { display: flex; align-items: flex-start; gap: 10px; color: var(--text-sec); font-size: 14.5px; }
+    .tldr li .icon {
+      flex-shrink: 0; width: 20px; height: 20px;
+      background: rgba(16,185,129,.2); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; margin-top: 2px;
+    }
+
+    /* ── Sections ────────────────────── */
+    section { margin-bottom: 44px; }
+    h2.section-title {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      padding-bottom: 12px; border-bottom: 1px solid var(--border);
+      margin-bottom: 22px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2.section-title .num {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--primary), #5B21B6);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; flex-shrink: 0;
+    }
+    p { color: var(--text-sec); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Data cards ──────────────────── */
+    .data-grid { display: grid; gap: 14px; }
+    .data-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: start;
+      gap: 14px;
+    }
+    .data-card .emoji { font-size: 24px; }
+    .data-card .info h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .data-card .info p { font-size: 13.5px; margin: 0; }
+    .pill {
+      font-size: 11px; font-weight: 700;
+      padding: 4px 10px; border-radius: 20px;
+      white-space: nowrap; letter-spacing: .4px;
+      text-transform: uppercase; align-self: flex-start;
+    }
+    .pill.local  { background: rgba(16,185,129,.15); color: #34D399; border: 1px solid rgba(16,185,129,.3); }
+    .pill.google { background: rgba(6,182,212,.15);  color: #22D3EE; border: 1px solid rgba(6,182,212,.3); }
+    .pill.device { background: rgba(124,58,237,.15); color: var(--primary-l); border: 1px solid rgba(124,58,237,.3); }
+    .pill.never  { background: rgba(248,113,113,.12); color: #FCA5A5; border: 1px solid rgba(248,113,113,.25); }
+
+    /* ── Highlights ──────────────────── */
+    .highlight { border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; font-size: 14px; }
+    .highlight.info { background: rgba(6,182,212,.08); border: 1px solid rgba(6,182,212,.25); color: #A5F3FC; }
+    .highlight.warn { background: rgba(251,191,36,.06); border: 1px solid rgba(251,191,36,.25); color: #FDE68A; }
+    .highlight strong { font-weight: 600; }
+
+    ul.styled { list-style: none; display: grid; gap: 9px; padding: 0; }
+    ul.styled li { color: var(--text-sec); font-size: 14.5px; padding-left: 20px; position: relative; }
+    ul.styled li::before { content: '›'; position: absolute; left: 0; color: var(--primary-l); font-weight: 700; }
+
+    a { color: var(--primary-l); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Contact ─────────────────────── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(124,58,237,.12), rgba(6,182,212,.06));
+      border: 1px solid rgba(124,58,237,.3);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      text-align: center;
+    }
+    .contact-card h3 { font-size: 18px; font-weight: 700; color: var(--primary-l); margin-bottom: 8px; }
+    .contact-card p { margin-bottom: 18px; font-size: 14px; }
+    .contact-card a.btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), #5B21B6);
+      color: #fff;
+      padding: 11px 28px;
+      border-radius: 10px;
+      font-weight: 600; font-size: 14px;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .contact-card a.btn:hover { opacity: .85; }
+
+    footer {
+      background: var(--bg-card2);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 28px 24px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 560px) {
+      .data-card { grid-template-columns: auto 1fr; }
+      .pill { grid-column: 2; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    All Privacy Policies
+  </a>
+</div>
+
+<header>
+  <div class="app-icon">🧠</div>
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Thought Manager &nbsp;·&nbsp; com.inamaqil.thoughtmanager</p>
+  <div class="badge">Last updated: July 29, 2026</div>
+</header>
+
+<main>
+
+  <div class="tldr">
+    <h2>✅ The Short Version</h2>
+    <ul>
+      <li><span class="icon">🔒</span><span>Your thoughts and journal entries <strong>never leave your device</strong>. Everything is stored in a local encrypted SQLite database.</span></li>
+      <li><span class="icon">🚫</span><span>We do <strong>not</strong> create accounts, collect personal identifiers, or run our own servers.</span></li>
+      <li><span class="icon">📢</span><span>Free users see ads served by <strong>Google AdMob</strong>. Google may collect advertising identifiers per their own privacy policy.</span></li>
+      <li><span class="icon">💳</span><span>In-app purchases are processed entirely by <strong>Google Play</strong>. We never see or store your payment details.</span></li>
+      <li><span class="icon">🔔</span><span>Push notifications (daily check-ins, weekly insights) are optional and can be disabled at any time.</span></li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="num">1</span> Introduction</h2>
+    <p>This Privacy Policy describes how <strong>Thought Manager</strong> ("the App") handles information when you use our Android application. The App is developed and maintained by <strong>inamaqil</strong> (GitHub: <a href="https://github.com/inamaqil" target="_blank">@inamaqil</a>).</p>
+    <p>Thought Manager is a private cognitive journaling tool designed for self-reflection, CBT-based thought reframing, and emotional wellness. Privacy is a core design principle — your mental health data belongs to you alone.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">2</span> Data We Handle</h2>
+    <div class="data-grid">
+
+      <div class="data-card">
+        <span class="emoji">📓</span>
+        <div class="info">
+          <h3>Thought Entries &amp; Journal Data</h3>
+          <p>Your CBT journal entries, mood ratings, distortion tags, and reframing notes. Stored <em>only</em> in a local SQLite database on your device. Never transmitted to any server.</p>
+        </div>
+        <span class="pill local">Local only</span>
+      </div>
+
+      <div class="data-card">
+        <span class="emoji">🔐</span>
+        <div class="info">
+          <h3>Biometric Authentication</h3>
+          <p>If you enable biometric lock, your fingerprint or face data is processed entirely by the Android OS. The App never reads, stores, or transmits biometric data.</p>
+        </div>
+        <span class="pill never">Never stored</span>
+      </div>
+
+      <div class="data-card">
+        <span class="emoji">🔔</span>
+        <div class="info">
+          <h3>Notification Preferences</h3>
+          <p>Your chosen reminder times and notification settings are saved locally on your device. No data is sent to our servers.</p>
+        </div>
+        <span class="pill local">Local only</span>
+      </div>
+
+      <div class="data-card">
+        <span class="emoji">📢</span>
+        <div class="info">
+          <h3>Advertising (Free Users)</h3>
+          <p>Free users see ads provided by <strong>Google AdMob</strong>. Google may collect your Advertising ID and usage data to show relevant ads. Premium users receive no ads.</p>
+        </div>
+        <span class="pill google">Google AdMob</span>
+      </div>
+
+      <div class="data-card">
+        <span class="emoji">💳</span>
+        <div class="info">
+          <h3>In-App Purchases</h3>
+          <p>The premium upgrade is processed entirely through <strong>Google Play Billing</strong>. The App only receives a confirmation token — no payment data is seen or stored by us.</p>
+        </div>
+        <span class="pill google">Google Play</span>
+      </div>
+
+      <div class="data-card">
+        <span class="emoji">☁️</span>
+        <div class="info">
+          <h3>Google Drive Backup (Premium)</h3>
+          <p>If you enable optional Drive sync, encrypted backups of your local data are written to <em>your own</em> Google Drive account. We have no access to this data.</p>
+        </div>
+        <span class="pill device">Your Drive only</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">3</span> Data We Do NOT Collect</h2>
+    <p>The following are <strong>never collected</strong> by Thought Manager:</p>
+    <ul class="styled">
+      <li>Your name, email address, phone number, or any personally identifiable information</li>
+      <li>The content of your thought entries, journal logs, or mood ratings</li>
+      <li>Your precise or approximate location</li>
+      <li>Your camera or microphone data</li>
+      <li>Crash logs or analytics uploaded to our servers (the App has no telemetry backend)</li>
+      <li>Device contacts, calendar, or files (beyond Drive sync when you explicitly enable it)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">4</span> Third-Party Services</h2>
+    <div class="highlight info">
+      <strong>Google AdMob</strong> — Advertising network for free users. Google may collect your Advertising ID. Opt out via device Settings → Google → Ads → Opt out of Ads Personalization.<br />
+      Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+    </div>
+    <div class="highlight info">
+      <strong>Google Play Billing</strong> — Processes the one-time premium upgrade. We receive only a non-sensitive purchase token.<br />
+      Policy: <a href="https://play.google.com/about/play-terms/" target="_blank">play.google.com/about/play-terms</a>
+    </div>
+    <div class="highlight info">
+      <strong>Google Drive API</strong> (optional, premium only) — Backs up encrypted data to your own Google account. We never access other files in your Drive.<br />
+      Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+    </div>
+    <div class="highlight warn">
+      <strong>Expo / EAS</strong> — The App is built using the Expo framework. Expo's build infrastructure processes the app bundle but has no access to your runtime data.
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">5</span> Android Permissions Explained</h2>
+    <div class="data-grid">
+      <div class="data-card">
+        <span class="emoji">🔒</span>
+        <div class="info"><h3>USE_BIOMETRIC / USE_FINGERPRINT</h3><p>Required for the optional biometric lock screen. No biometric data is stored or transmitted.</p></div>
+        <span class="pill local">Optional</span>
+      </div>
+      <div class="data-card">
+        <span class="emoji">🔔</span>
+        <div class="info"><h3>POST_NOTIFICATIONS</h3><p>Required to send daily check-in and weekly insight reminders. Can be denied or revoked at any time.</p></div>
+        <span class="pill local">Optional</span>
+      </div>
+      <div class="data-card">
+        <span class="emoji">⏰</span>
+        <div class="info"><h3>SCHEDULE_EXACT_ALARM / RECEIVE_BOOT_COMPLETED</h3><p>Schedules notifications at your chosen time. RECEIVE_BOOT_COMPLETED ensures reminders survive device restarts.</p></div>
+        <span class="pill local">Optional</span>
+      </div>
+      <div class="data-card">
+        <span class="emoji">📳</span>
+        <div class="info"><h3>VIBRATE</h3><p>Used for haptic feedback during breathing exercises and interactions.</p></div>
+        <span class="pill local">Functional</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">6</span> Data Retention &amp; Deletion</h2>
+    <p>All data lives exclusively on your device. You have full control:</p>
+    <ul class="styled">
+      <li>Delete individual entries at any time from within the App</li>
+      <li>Uninstalling the App permanently removes all local data</li>
+      <li>Android Settings → Apps → Thought Manager → Clear Data wipes everything instantly</li>
+      <li>Google Drive backups can be deleted directly from your Drive</li>
+    </ul>
+    <p>Because we hold no data on our servers, there is nothing for us to delete on your behalf.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">7</span> Children's Privacy</h2>
+    <p>Thought Manager is not directed at children under the age of <strong>13</strong> (or 16 in the EU/EEA). We do not knowingly collect personal information from children.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">8</span> Changes to This Policy</h2>
+    <p>If we make material changes, we will update the "Last updated" date at the top of this page. The current version is always available at:<br />
+      <a href="https://inamaqil.github.io/privacy/thought-manager.html" target="_blank">https://inamaqil.github.io/privacy/thought-manager.html</a>
+    </p>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="num">9</span> Contact Us</h2>
+    <div class="contact-card">
+      <h3>Questions or Concerns?</h3>
+      <p>If you have any questions about this Privacy Policy, please reach out via GitHub.</p>
+      <a class="btn" href="https://github.com/inamaqil/privacy/issues" target="_blank">Open an Issue on GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Thought Manager</strong> &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Effective July 29, 2026</p>
+  <p style="margin-top:6px;">Package: com.inamaqil.thoughtmanager &nbsp;·&nbsp; <a href="index.html">← All Policies</a></p>
+</footer>
+
+</body>
+</html>
