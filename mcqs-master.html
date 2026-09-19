@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Thought Manager</title>
-  <meta name="description" content="Privacy Policy for Thought Manager, a private cognitive journaling app by inamaqil." />
+  <title>Privacy Policy – MCQs Master</title>
+  <meta name="description" content="Privacy Policy for MCQs Master, a comprehensive learning and quiz app by inamaqil." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -14,9 +14,9 @@
       --bg-card:   #111827;
       --bg-card2:  #0D1526;
       --border:    #1F2D45;
-      --primary:   #7C3AED;
-      --primary-l: #A78BFA;
-      --accent:    #06B6D4;
+      --primary:   #ea580c; /* MCQs Master Orange */
+      --primary-l: #fb923c;
+      --accent:    #3b82f6; /* Blue Accent */
       --text:      #F1F5F9;
       --text-sec:  #94A3B8;
       --text-muted:#475569;
@@ -65,7 +65,7 @@
       position: absolute;
       top: -60px; left: 50%; transform: translateX(-50%);
       width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(124,58,237,.25) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(234,88,12,.25) 0%, transparent 70%);
       pointer-events: none;
     }
     .app-icon {
@@ -75,7 +75,7 @@
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px;
       font-size: 40px;
-      box-shadow: 0 8px 32px rgba(124,58,237,.4);
+      box-shadow: 0 8px 32px rgba(234,88,12,.4);
     }
     header h1 {
       font-size: clamp(26px, 5vw, 38px);
@@ -89,8 +89,8 @@
     header .subtitle { color: var(--text-sec); font-size: 15px; }
     .badge {
       display: inline-block;
-      background: rgba(124,58,237,.2);
-      border: 1px solid rgba(124,58,237,.4);
+      background: rgba(234,88,12,.2);
+      border: 1px solid rgba(234,88,12,.4);
       color: var(--primary-l);
       font-size: 12px;
       font-weight: 600;
@@ -132,7 +132,7 @@
     }
     h2.section-title .num {
       width: 28px; height: 28px;
-      background: linear-gradient(135deg, var(--primary), #5B21B6);
+      background: linear-gradient(135deg, var(--primary), #9a3412);
       border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
       font-size: 13px; font-weight: 700; flex-shrink: 0;
@@ -163,8 +163,7 @@
     }
     .pill.local  { background: rgba(16,185,129,.15); color: #34D399; border: 1px solid rgba(16,185,129,.3); }
     .pill.google { background: rgba(6,182,212,.15);  color: #22D3EE; border: 1px solid rgba(6,182,212,.3); }
-    .pill.device { background: rgba(124,58,237,.15); color: var(--primary-l); border: 1px solid rgba(124,58,237,.3); }
-    .pill.never  { background: rgba(248,113,113,.12); color: #FCA5A5; border: 1px solid rgba(248,113,113,.25); }
+    .pill.cloud  { background: rgba(59,130,246,.15); color: #60a5fa; border: 1px solid rgba(59,130,246,.3); }
 
     /* ── Highlights ──────────────────── */
     .highlight { border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; font-size: 14px; }
@@ -181,8 +180,8 @@
 
     /* ── Contact ─────────────────────── */
     .contact-card {
-      background: linear-gradient(135deg, rgba(124,58,237,.12), rgba(6,182,212,.06));
-      border: 1px solid rgba(124,58,237,.3);
+      background: linear-gradient(135deg, rgba(234,88,12,.12), rgba(6,182,212,.06));
+      border: 1px solid rgba(234,88,12,.3);
       border-radius: var(--radius);
       padding: 28px 32px;
       text-align: center;
@@ -191,7 +190,7 @@
     .contact-card p { margin-bottom: 18px; font-size: 14px; }
     .contact-card a.btn {
       display: inline-block;
-      background: linear-gradient(135deg, var(--primary), #5B21B6);
+      background: linear-gradient(135deg, var(--primary), #c2410c);
       color: #fff;
       padding: 11px 28px;
       border-radius: 10px;
@@ -221,15 +220,15 @@
 <div class="back-bar">
   <a href="index.html">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-    All Privacy Policies
+    Back to Home
   </a>
 </div>
 
 <header>
-  <div class="app-icon">🧠</div>
+  <div class="app-icon">🎓</div>
   <h1>Privacy Policy</h1>
-  <p class="subtitle">Thought Manager &nbsp;·&nbsp; com.inamaqil.thoughtmanager</p>
-  <div class="badge">Last updated: July 29, 2026</div>
+  <p class="subtitle">MCQs Master &nbsp;·&nbsp; com.mcqsmaster.app</p>
+  <div class="badge">Last updated: September 20, 2026</div>
 </header>
 
 <main>
@@ -237,18 +236,18 @@
   <div class="tldr">
     <h2>✅ The Short Version</h2>
     <ul>
-      <li><span class="icon">🔒</span><span>Your thoughts and journal entries <strong>never leave your device</strong>. Everything is stored in a local encrypted SQLite database.</span></li>
-      <li><span class="icon">🚫</span><span>We do <strong>not</strong> create accounts, collect personal identifiers, or run our own servers.</span></li>
+      <li><span class="icon">👤</span><span>We use <strong>Google Sign-In</strong> purely to authenticate you and sync your test progress. We only request your basic profile (email, name, picture).</span></li>
+      <li><span class="icon">☁️</span><span>Your quiz progress, points, and custom test libraries are securely stored in <strong>Google Firebase/Firestore</strong> so you can access them across devices.</span></li>
       <li><span class="icon">📢</span><span>Free users see ads served by <strong>Google AdMob</strong>. Google may collect advertising identifiers per their own privacy policy.</span></li>
       <li><span class="icon">💳</span><span>In-app purchases are processed entirely by <strong>Google Play</strong>. We never see or store your payment details.</span></li>
-      <li><span class="icon">🔔</span><span>Push notifications (daily check-ins, weekly insights) are optional and can be disabled at any time.</span></li>
+      <li><span class="icon">🚫</span><span>We do <strong>not</strong> sell or share your personal data with third parties.</span></li>
     </ul>
   </div>
 
   <section>
     <h2 class="section-title"><span class="num">1</span> Introduction</h2>
-    <p>This Privacy Policy describes how <strong>Thought Manager</strong> ("the App") handles information when you use our Android application. The App is developed and maintained by <strong>inamaqil</strong> (GitHub: <a href="https://github.com/inamaqil" target="_blank">@inamaqil</a>).</p>
-    <p>Thought Manager is a private cognitive journaling tool designed for self-reflection, CBT-based thought reframing, and emotional wellness. Privacy is a core design principle — your mental health data belongs to you alone.</p>
+    <p>This Privacy Policy describes how <strong>MCQs Master</strong> ("the App") handles information when you use our Android application. The App is developed and maintained by <strong>inamaqil</strong> (GitHub: <a href="https://github.com/inamaqil" target="_blank">@inamaqil</a>).</p>
+    <p>MCQs Master is an educational platform designed to help you practice multiple-choice questions, create custom test exams, and compete on global leaderboards. We only collect data necessary to provide and improve these core features.</p>
   </section>
 
   <section>
@@ -256,37 +255,37 @@
     <div class="data-grid">
 
       <div class="data-card">
-        <span class="emoji">📓</span>
+        <span class="emoji">👤</span>
         <div class="info">
-          <h3>Thought Entries &amp; Journal Data</h3>
-          <p>Your CBT journal entries, mood ratings, distortion tags, and reframing notes. Stored <em>only</em> in a local SQLite database on your device. Never transmitted to any server.</p>
+          <h3>Google Authentication Data</h3>
+          <p>When you log in with Google, we receive your basic profile info (email address, display name, profile picture) to create your account and secure your data.</p>
         </div>
-        <span class="pill local">Local only</span>
+        <span class="pill google">Google Auth</span>
       </div>
 
       <div class="data-card">
-        <span class="emoji">🔐</span>
+        <span class="emoji">📊</span>
         <div class="info">
-          <h3>Biometric Authentication</h3>
-          <p>If you enable biometric lock, your fingerprint or face data is processed entirely by the Android OS. The App never reads, stores, or transmits biometric data.</p>
+          <h3>Test Progress & Leaderboards</h3>
+          <p>Your correct/incorrect answers, subject progress, and total earned points are stored securely in Firestore to build the global leaderboard and sync your learning history.</p>
         </div>
-        <span class="pill never">Never stored</span>
+        <span class="pill cloud">Firestore Sync</span>
       </div>
 
       <div class="data-card">
-        <span class="emoji">🔔</span>
+        <span class="emoji">✍️</span>
         <div class="info">
-          <h3>Notification Preferences</h3>
-          <p>Your chosen reminder times and notification settings are saved locally on your device. No data is sent to our servers.</p>
+          <h3>Custom Test Libraries</h3>
+          <p>If you create and publish custom MCQs exams, this content is stored in our database so it can be shared with the community. You retain ownership of this content.</p>
         </div>
-        <span class="pill local">Local only</span>
+        <span class="pill cloud">Firestore Sync</span>
       </div>
 
       <div class="data-card">
         <span class="emoji">📢</span>
         <div class="info">
           <h3>Advertising (Free Users)</h3>
-          <p>Free users see ads provided by <strong>Google AdMob</strong>. Google may collect your Advertising ID and usage data to show relevant ads. Premium users receive no ads.</p>
+          <p>Free users see ads provided by <strong>Google AdMob</strong>. Google may collect your Advertising ID and usage data to show relevant ads. Pro users receive no ads.</p>
         </div>
         <span class="pill google">Google AdMob</span>
       </div>
@@ -294,19 +293,10 @@
       <div class="data-card">
         <span class="emoji">💳</span>
         <div class="info">
-          <h3>In-App Purchases</h3>
-          <p>The premium upgrade is processed entirely through <strong>Google Play Billing</strong>. The App only receives a confirmation token — no payment data is seen or stored by us.</p>
+          <h3>In-App Purchases (Pro Upgrades)</h3>
+          <p>The Pro upgrade is processed entirely through <strong>Google Play Billing</strong>. We only receive a confirmation token to unlock your features — no payment data is seen or stored by us.</p>
         </div>
         <span class="pill google">Google Play</span>
-      </div>
-
-      <div class="data-card">
-        <span class="emoji">☁️</span>
-        <div class="info">
-          <h3>Google Drive Backup (Premium)</h3>
-          <p>If you enable optional Drive sync, encrypted backups of your local data are written to <em>your own</em> Google Drive account. We have no access to this data.</p>
-        </div>
-        <span class="pill device">Your Drive only</span>
       </div>
 
     </div>
@@ -314,101 +304,63 @@
 
   <section>
     <h2 class="section-title"><span class="num">3</span> Data We Do NOT Collect</h2>
-    <p>The following are <strong>never collected</strong> by Thought Manager:</p>
+    <p>The following are <strong>never collected</strong> by MCQs Master:</p>
     <ul class="styled">
-      <li>Your name, email address, phone number, or any personally identifiable information</li>
-      <li>The content of your thought entries, journal logs, or mood ratings</li>
-      <li>Your precise or approximate location</li>
-      <li>Your camera or microphone data</li>
-      <li>Crash logs or analytics uploaded to our servers (the App has no telemetry backend)</li>
-      <li>Device contacts, calendar, or files (beyond Drive sync when you explicitly enable it)</li>
+      <li>Your exact physical location or GPS data.</li>
+      <li>Your camera, microphone, or biometric data.</li>
+      <li>Contacts, calendar events, or personal files on your device.</li>
+      <li>Passwords (authentication is handled entirely by Google OAuth).</li>
     </ul>
   </section>
 
   <section>
     <h2 class="section-title"><span class="num">4</span> Third-Party Services</h2>
     <div class="highlight info">
+      <strong>Google Firebase & Firestore</strong> — Used for secure user authentication, progress syncing, and database hosting.<br />
+      Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+    </div>
+    <div class="highlight info">
       <strong>Google AdMob</strong> — Advertising network for free users. Google may collect your Advertising ID. Opt out via device Settings → Google → Ads → Opt out of Ads Personalization.<br />
       Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
     </div>
     <div class="highlight info">
-      <strong>Google Play Billing</strong> — Processes the one-time premium upgrade. We receive only a non-sensitive purchase token.<br />
+      <strong>Google Play Billing</strong> — Processes the in-app Pro upgrades securely.<br />
       Policy: <a href="https://play.google.com/about/play-terms/" target="_blank">play.google.com/about/play-terms</a>
     </div>
-    <div class="highlight info">
-      <strong>Google Drive API</strong> (optional, premium only) — Backs up encrypted data to your own Google account. We never access other files in your Drive.<br />
-      Policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
-    </div>
-    <div class="highlight warn">
-      <strong>Expo / EAS</strong> — The App is built using the Expo framework. Expo's build infrastructure processes the app bundle but has no access to your runtime data.
-    </div>
   </section>
 
   <section>
-    <h2 class="section-title"><span class="num">5</span> Android Permissions Explained</h2>
-    <div class="data-grid">
-      <div class="data-card">
-        <span class="emoji">🔒</span>
-        <div class="info"><h3>USE_BIOMETRIC / USE_FINGERPRINT</h3><p>Required for the optional biometric lock screen. No biometric data is stored or transmitted.</p></div>
-        <span class="pill local">Optional</span>
-      </div>
-      <div class="data-card">
-        <span class="emoji">🔔</span>
-        <div class="info"><h3>POST_NOTIFICATIONS</h3><p>Required to send daily check-in and weekly insight reminders. Can be denied or revoked at any time.</p></div>
-        <span class="pill local">Optional</span>
-      </div>
-      <div class="data-card">
-        <span class="emoji">⏰</span>
-        <div class="info"><h3>SCHEDULE_EXACT_ALARM / RECEIVE_BOOT_COMPLETED</h3><p>Schedules notifications at your chosen time. RECEIVE_BOOT_COMPLETED ensures reminders survive device restarts.</p></div>
-        <span class="pill local">Optional</span>
-      </div>
-      <div class="data-card">
-        <span class="emoji">📳</span>
-        <div class="info"><h3>VIBRATE</h3><p>Used for haptic feedback during breathing exercises and interactions.</p></div>
-        <span class="pill local">Functional</span>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title"><span class="num">6</span> Data Retention &amp; Deletion</h2>
-    <p>All data lives exclusively on your device. You have full control:</p>
+    <h2 class="section-title"><span class="num">5</span> Data Retention &amp; Deletion</h2>
+    <p>You have full control over your data. If you wish to delete your account and all associated progress, custom tests, and profile information, you can do so by:</p>
     <ul class="styled">
-      <li>Delete individual entries at any time from within the App</li>
-      <li>Uninstalling the App permanently removes all local data</li>
-      <li>Android Settings → Apps → Thought Manager → Clear Data wipes everything instantly</li>
-      <li>Google Drive backups can be deleted directly from your Drive</li>
+      <li>Emailing us directly at <strong>mcqsmaster.official@gmail.com</strong> with your registered Google email address requesting account deletion.</li>
     </ul>
-    <p>Because we hold no data on our servers, there is nothing for us to delete on your behalf.</p>
+    <p>Upon request, your account and all identifiable data will be permanently wiped from our active Firestore database.</p>
   </section>
 
   <section>
-    <h2 class="section-title"><span class="num">7</span> Children's Privacy</h2>
-    <p>Thought Manager is not directed at children under the age of <strong>13</strong> (or 16 in the EU/EEA). We do not knowingly collect personal information from children.</p>
-  </section>
-
-  <section>
-    <h2 class="section-title"><span class="num">8</span> Changes to This Policy</h2>
+    <h2 class="section-title"><span class="num">6</span> Changes to This Policy</h2>
     <p>If we make material changes, we will update the "Last updated" date at the top of this page. The current version is always available at:<br />
-      <a href="https://inamaqil.github.io/privacy/thought-manager.html" target="_blank">https://inamaqil.github.io/privacy/thought-manager.html</a>
+      <a href="https://inamaqil.github.io/privacy.html" target="_blank">https://inamaqil.github.io/privacy.html</a>
     </p>
   </section>
 
   <section>
-    <h2 class="section-title"><span class="num">9</span> Contact Us</h2>
+    <h2 class="section-title"><span class="num">7</span> Contact Us</h2>
     <div class="contact-card">
       <h3>Questions or Concerns?</h3>
-      <p>If you have any questions about this Privacy Policy, please reach out via GitHub.</p>
-      <a class="btn" href="https://github.com/inamaqil/privacy/issues" target="_blank">Open an Issue on GitHub</a>
+      <p>If you have any questions about this Privacy Policy, please reach out to us via email.</p>
+      <a class="btn" href="mailto:mcqsmaster.official@gmail.com">mcqsmaster.official@gmail.com</a>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <p><strong>Thought Manager</strong> &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Effective July 29, 2026</p>
-  <p style="margin-top:6px;">Package: com.inamaqil.thoughtmanager &nbsp;·&nbsp; <a href="index.html">← All Policies</a></p>
+  <p><strong>MCQs Master</strong> &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Effective September 20, 2026</p>
+  <p style="margin-top:6px;">Package: com.mcqsmaster.app &nbsp;·&nbsp; <a href="index.html">← Back</a></p>
 </footer>
 
 </body>
 </html>
+
